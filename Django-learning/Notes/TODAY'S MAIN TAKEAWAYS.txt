@@ -1,0 +1,27 @@
+TODAY'S MAIN TAKEAWAYS:
+
+views.py = every logic in the program, main controller, website ma aayeko every response haru views.py bata nai janxa, has access to load or save something on database
+
+Functions: home, contact, about
+returns the response after taking the request from the user
+HttpResponse, render
+Yo response haru send garna: from Django.http import HttpResponse, from Django.shortcuts import render
+
+urls.py: views.py ma banayeko function haru lai use garera local link ma url path add gariyo ra link ma (local 8000 link)/about/ or (local 8000 link)/contact/ lekhyo vane views.py ma j return garne code lekheko xa, tei return garxa
+tesko lagi: from .(current dir) import views
+ 
+
+Website ko certain url ma display garnu parne html file templates vanne folder ma rakhinxa, css ani js files haru static vanne folder ma rakhinxa. templates and static folder chai project level directory ma rakhinxa
+
+Bahira ko dir (root) = manage.py dir
+Vitra ko folder = project dir
+Tyo vanda vitra ko folder = app dir
+
+Kunai pani webpage ko lagi lekhiyeko html file lai load garna http response haina,render garnu parxa, tesko lagi templates vanne folder lai settings.py vanne file ma rakhdinu parxa so that future ma aru html file load garna parey sidhai file ko path access mentioned hunxa and we can directly link html file to render.
+
+static files haru ko lagi:
+settings.py ma: import os
+ra static folder ko kaam ko thau ma STATICFILES_DIRS banayera yesma [os.path.join(BASE_DIR,'static')]
+yo garepaxi hamro os le directly yo path use garera static folder lai access garxa
+
+ani os path diyepaxi html ma css link garna sab vanda top ma {% load static %} ani link tag ma href='{% static 'style.css' %}

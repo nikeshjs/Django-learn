@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(7, 5, 62);
+    color: aliceblue;
+}
+
+title{
+    text-align: center;
+    font-weight: 300;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    text-align: center;
+    color: #ffffff;
+    font-family: fantasy;
+}
+
